@@ -19,7 +19,7 @@ import {
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const formSchema = z
@@ -169,7 +169,7 @@ const SignUpView = () => {
                 <Button disabled={pending} className="w-full" type="submit">
                   Sign In
                 </Button>
-                <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after: border-t ">
+                <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                   <span className="bg-card text-muted-foreground relative z-10 px-2">
                     Or continue with
                   </span>
@@ -205,7 +205,7 @@ const SignUpView = () => {
             </form>
           </Form>
           <div className="bg-radial from-green-700 to-green-900 relative hidden md:flex flex-col gap-y-4 items-center justify-center">
-            <Image src="/logo.svg" alt="" className="h-[92px] w-[92px]" />
+            <Image src="/logo.svg" height={92} width={92} alt="" />
             <p className="text-2xl font-semibold text-white">Meet.AI</p>
           </div>
         </CardContent>
